@@ -30,24 +30,70 @@
             <img src="img/logo-mobile.png" alt="Логотип">
           </picture>
         </a>
-        <ul class="menu">
+        <!-- <ul class="menu">
           <li class="menu__item menu__item--search">
             <input type="text" placeholder="Введите слово, автора или">
             <button class="menu__toggle"></button>
           </li>
           <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Мода</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Мода</a>
+            <ul class="menu__submenu">
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Авторы</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Подписчики</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Медиа</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Агенты</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Инструкции</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Вакансии</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Авторы</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Подписчики</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Медиа</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Агенты</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Инструкции</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Вакансии</a></li>
+            </ul>
+          </li>
           <li class="menu__item"><a href="#" class="menu__link">Культура</a></li>
           <li class="menu__item"><a href="#" class="menu__link">Красота</a></li>
           <li class="menu__item"><a href="#" class="menu__link">Технологии</a></li>
           <li class="menu__item"><a href="#" class="menu__link">Личность</a></li>
           <li class="menu__item"><a href="#" class="menu__link">Видео</a></li>
-        </ul>
+        </ul> -->
         <a class="page-header__login" href="#">
           <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-login"></use></svg>
         </a>
         <button class="hamburger"></button>
       </div>
+      <ul class="menu">
+        <li class="menu__item menu__item--search">
+          <input type="text" placeholder="Введите слово, автора или">
+          <button class="menu__toggle"></button>
+          <a class="menu__item-search-icon" href="#">
+            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+          </a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Мода</a>
+          <ul class="menu__submenu">
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Авторы</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Подписчики</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Медиа</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Агенты</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Инструкции</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Вакансии</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Авторы</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Подписчики</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Медиа</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Агенты</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Инструкции</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Вакансии</a></li>
+          </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Культура</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Красота</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Технологии</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Личность</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Видео</a></li>
+        </ul>
     </header>
     <main class="main-content">
       <div class="articles">
@@ -256,6 +302,10 @@
     <symbol id="icon-close" width="12" height="12" viewBox="0 0 12 12">
       <path d="M7.06127 5.99987L11.7801 1.28102C12.0733 0.988097 12.0733 0.51281 11.7801 0.219883C11.4869 -0.0732943 11.0122 -0.0732943 10.719 0.219883L6.00012 4.93873L1.28102 0.219883C0.987847 -0.0732943 0.51306 -0.0732943 0.219883 0.219883C-0.0732943 0.51281 -0.0732943 0.988097 0.219883 1.28102L4.93898 5.99987L0.219883 10.7187C-0.0732943 11.0117 -0.0732943 11.4869 0.219883 11.7799C0.366471 11.9262 0.558587 11.9995 0.750453 11.9995C0.942319 11.9995 1.13444 11.9262 1.28102 11.7796L6.00012 7.06076L10.719 11.7796C10.8656 11.9262 11.0577 11.9995 11.2495 11.9995C11.4414 11.9995 11.6335 11.9262 11.7801 11.7796C12.0733 11.4867 12.0733 11.0114 11.7801 10.7185L7.06127 5.99987Z" fill="#1A1A1A"/>
     </symbol>
+    <symbol id="icon-search" width="20" height="20" viewBox="0 0 20 20">
+      <path d="M19.3608 18.2168L14.6007 13.2662C15.8246 11.8113 16.4952 9.98069 16.4952 8.07499C16.4952 3.62251 12.8727 0 8.42021 0C3.96773 0 0.345215 3.62251 0.345215 8.07499C0.345215 12.5275 3.96773 16.15 8.42021 16.15C10.0917 16.15 11.6846 15.6458 13.0465 14.6888L17.8427 19.677C18.0431 19.8852 18.3128 20 18.6017 20C18.8752 20 19.1347 19.8957 19.3316 19.7061C19.7501 19.3034 19.7635 18.6357 19.3608 18.2168ZM8.42021 2.10652C11.7113 2.10652 14.3887 4.78391 14.3887 8.07499C14.3887 11.3661 11.7113 14.0435 8.42021 14.0435C5.12912 14.0435 2.45173 11.3661 2.45173 8.07499C2.45173 4.78391 5.12912 2.10652 8.42021 2.10652Z" fill="#1A1A1A"/>
+    </symbol>
+
   </svg>
   <script src="js/script.js"></script>
 </body>

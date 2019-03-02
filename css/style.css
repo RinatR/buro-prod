@@ -461,6 +461,9 @@ img {
   }
 }
 @media (min-width: 1920px) {
+  .page-header {
+    border-bottom: 0;
+  }
   .page-header__inner {
     position: relative;
     flex-direction: column;
@@ -523,33 +526,37 @@ img {
   .logo {
     padding: 30px 0;
   }
+  .logo img {
+    vertical-align: baseline;
+  }
 }
 .menu {
-  display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: -15px;
+  right: -320px;
   width: 320px;
   padding: 0;
   margin: 0;
   list-style: none;
   background-color: #ffffff;
   z-index: 3;
+  transition: right 0.5s;
 }
 .menu--opened {
-  display: block;
+  right: 0;
 }
 .menu__item {
-  padding: 17px 0;
-  padding-left: 15px;
+  position: relative;
   border-bottom: 1px solid #e2e2e2;
   border-top: 1px solid #e2e2e2;
   margin-top: -1px;
+  cursor: pointer;
 }
 .menu__item--search {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
   padding: 0;
   padding-left: 15px;
 }
@@ -557,7 +564,7 @@ img {
   width: 249px;
   height: 57px;
   padding: 0;
-  padding-right: 15px;
+  padding-right: 55px;
   font-size: 15px;
   line-height: 15px;
   border: none;
@@ -567,11 +574,28 @@ img {
   background-color: #ffffff;
   color: #999999;
 }
+.menu__item:nth-child(2) .menu__link:after {
+  display: none;
+}
+.menu__item:hover .menu__submenu {
+  display: block;
+}
+.menu__item-search-icon {
+  position: absolute;
+  top: 50%;
+  right: 76px;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 .menu__link {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
   position: relative;
+  padding: 17px;
+  padding-left: 15px;
   font-family: "ProximaNova-Regular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
@@ -580,6 +604,7 @@ img {
   text-decoration: none;
   color: #1a1a1a;
   letter-spacing: 2px;
+  box-sizing: border-box;
 }
 .menu__link:after {
   position: absolute;
@@ -595,9 +620,16 @@ img {
   content: "";
 }
 .menu__link:hover {
+  padding-left: 33px;
   color: #ff0000;
 }
 .menu__link:hover:after {
+  left: 15px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  border: 2px solid #1a1a1a;
+  border-top: 0;
+  border-right: 0;
   border-color: #ff0000;
 }
 .menu__toggle {
@@ -631,12 +663,40 @@ img {
   background-color: #1a1a1a;
   content: "";
 }
+.menu__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 103px;
+  margin: 0;
+  list-style: none;
+  background-color: #f6f6f6;
+  border-top: 2px solid #e2e2e2;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.menu__submenu-item {
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.menu__submenu-link {
+  font-family: "ProximaNova-Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #376D95;
+  text-decoration: none;
+}
+.menu__submenu-link:hover {
+  text-decoration: underline;
+}
 @media (min-width: 1020px) {
   .menu {
-    position: fixed;
     width: 320px;
     min-height: 598px;
-    right: 0px;
   }
   .menu:after,
   .menu:before {
@@ -646,23 +706,19 @@ img {
 @media (min-width: 1920px) {
   .menu {
     position: relative;
+    right: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
     min-height: 55px;
+    padding: 0 280px;
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    background-color: #ffffff;
     z-index: 1;
-  }
-  .menu:after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -280px;
-    width: 1920px;
-    height: 1px;
-    background-color: #e2e2e2;
-    content: "";
   }
   .menu__item {
     margin-right: 33px;
@@ -674,8 +730,14 @@ img {
   .menu__item:nth-child(2) {
     display: none;
   }
-  .menu__item:nth-child(3) {
+  .menu__item:nth-child(3) .menu__link {
     padding-left: 0;
+  }
+  .menu__item:nth-child(3) .menu__link:before {
+    left: 0;
+  }
+  .menu__item:hover .menu__submenu {
+    display: none;
   }
   .menu__link {
     position: relative;
@@ -686,15 +748,18 @@ img {
   .menu__link:before {
     display: none;
     position: absolute;
-    bottom: -21px;
-    left: 0;
-    right: 0;
+    bottom: -5px;
+    left: 15px;
+    right: 17px;
     height: 1px;
     background-color: #ff0000;
     content: "";
   }
   .menu__link:hover:before {
     display: block;
+  }
+  .menu__link:hover {
+    padding-left: 15px;
   }
 }
 .hamburger {

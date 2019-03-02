@@ -41,10 +41,11 @@ function fixedMenu() {
   window.onscroll = function() {
 
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  console.log(scrolled)
     if(scrolled > 228) {
       menu.style.position = "fixed";
-      menu.style.left = "363px";
       menu.style.borderBottom = "1px solid #e2e2e2";
+      menu.style.paddingLeft = "400px";
       logo.style.position = "fixed";
       logo.style.left = "280px";
       logo.style.top = "0";
@@ -52,17 +53,14 @@ function fixedMenu() {
       logo.style.width = "49px";
       logo.style.height = "17px";
       logo.style.paddingTop = "19px";
-      logo.style.paddingBottom = "19px";
+      logo.style.paddingBottom = "21px";
       logo.style.paddingRight = "34px";
-      logo.style.backgroundColor = "#ffffff";
-      logo.style.borderBottom = "1px solid #e2e2e2";
     }
 
     else {
       menu.style.position = "relative";
+      menu.style.paddingLeft = "280px";
       menu.style.left = "0px";
-      menu.style.paddingLeft = "0px";
-      menu.style.borderBottom = "none";
       logo.style.position = "static";
       logo.style.width = "168px";
       logo.style.height = "61px";
@@ -71,6 +69,7 @@ function fixedMenu() {
       logo.style.borderBottom = "none";
     }
   }
+
 }
 
 
