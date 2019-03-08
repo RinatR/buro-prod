@@ -13,10 +13,10 @@
         <div class="page-header__top-inner">
           <nav class="page-header__top-menu">
             <a href="#" class="page-header__top-link">Подпишись</a>
-            <a href="#modallogin" class="page-header__top-link">
+            <button class="page-header__top-link page-header__top-link--login">
               <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-login"></use></svg>
               Войти
-            </a>
+            </button>
             <a href="#" class="page-header__top-link">Создать аккаунт</a>
             <a href="#" class="page-header__top-link">Подписка</a>
           </nav>
@@ -30,46 +30,18 @@
             <img src="img/logo-mobile.png" alt="Логотип">
           </picture>
         </a>
-        <!-- <ul class="menu">
-          <li class="menu__item menu__item--search">
-            <input type="text" placeholder="Введите слово, автора или">
-            <button class="menu__toggle"></button>
-          </li>
-          <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Мода</a>
-            <ul class="menu__submenu">
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Авторы</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Подписчики</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Медиа</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Агенты</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Инструкции</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Вакансии</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Авторы</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Подписчики</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Медиа</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Агенты</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Инструкции</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Вакансии</a></li>
-            </ul>
-          </li>
-          <li class="menu__item"><a href="#" class="menu__link">Культура</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Красота</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Технологии</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Личность</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Видео</a></li>
-        </ul> -->
-        <a class="page-header__login" href="#">
+        <button class="page-header__login">
           <svg width="12" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-login"></use></svg>
-        </a>
+        </button>
         <button class="hamburger"></button>
       </div>
-      <ul class="menu">
+      <ul class="menu" id="menu">
         <li class="menu__item menu__item--search">
           <input type="text" placeholder="Введите слово, автора или">
-          <button class="menu__toggle"></button>
-          <a class="menu__item-search-icon" href="#">
+          <button class="menu__item-search-icon" href="#">
             <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
-          </a>
+          </button>
+          <button class="menu__toggle"></button>
         </li>
         <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Мода</a>
@@ -93,7 +65,7 @@
         <li class="menu__item"><a href="#" class="menu__link">Технологии</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Личность</a></li>
         <li class="menu__item"><a href="#" class="menu__link">Видео</a></li>
-        </ul>
+      </ul>
     </header>
     <main class="main-content">
       <div class="articles">
@@ -260,16 +232,16 @@
         </div>
       </div>
     </footer>
-    <div class="modal-login" id="modallogin">
-      <form class="modal-login-form" action="/echo" method="post">
+    <div class="modal-login" id="modal-login">
+      <form class="modal-login-form" action="#" method="post">
         <h3 class="modal-login-form__title">Войти</h3>
         <div class="modal-login-form__group">
           <label class="modal-login-form__label" for="email">Ваш e-mail</label>
-          <input class="modal-login-form__input" type="email" id="email" required>
+          <input class="modal-login-form__input" type="email" id="email">
         </div>
         <div class="modal-login-form__group">
           <label class="modal-login-form__label" for="password">Пароль</label>
-          <input class="modal-login-form__input" type="password" id="password" required>
+          <input class="modal-login-form__input" type="password" id="password">
         </div>
         <div class="modal-login-form__group">
           <input type="checkbox" id="rememberme">
@@ -282,9 +254,12 @@
           <a class="modal-login-form__link"href="#">Подписаться</a>
         </div>
       </form>
-      <button class="modal-login__close">
+      <!-- <button class="modal-login__close">
         <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use></svg>
-      </button>
+      </button> -->
+      <a class="modal-login__close" href="#">
+        <svg width="12" height="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use></svg>
+      </a>
     </div>
     <div class="page-wrapper__overlay"></div>
   </div>
